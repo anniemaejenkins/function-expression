@@ -30,20 +30,19 @@ function maxOfThree(x, y, z){
 // A:
 
 function isVowel(char){
-  var vowel = (['a', 'e', 'i', 'o', 'u']);
-  if (char == vowel) {
+  char = char.toLowerCase();
+  if (char == "a" || char === "e" || char === "i" || char === "o" || char === "u") {
     return true;
-  } else {
-    return false;
+  }  return false;
   }
-}
 
 
 // 4.
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // A:
 function sum(x,y){
-  return x + y;
+  var total = x + y;
+  return total;
 }
 
 
@@ -60,11 +59,12 @@ function avg(x,y,z){
 // 6.
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // A:
-function getLength(){
+function getLength(hi){
   var hi = "hi";
-  return hi.length;
+  return (hi.length);
 }
 
+getLength();
 
 // 7.
 // Write a function called `greaterThan` that takes two parameters
@@ -85,12 +85,11 @@ function greaterThan(x,y) {
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
 // A:
-function greet() {
-  var name = prompt("Name?");
+function greet(name) {
   return ("Hello," + name);
 }
 
-
+greet("Annie");
 
 // 9.
 // Write a function called `madlib` that takes 4 or more parameters (words).
@@ -100,18 +99,10 @@ function greet() {
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 // A:
-function madlib(word1, word2, word3, word4) {
-  var animal = word1;
-  var verb = word2;
-  var descript = word3;
-  var object = word4;
-  var fullSen = ["The" + animal + verb + "over the" + descript + object];
+function madlib(animal, verb, descript, object) {
+  var fullSen = "The" + " " + animal + " " + verb + " " + "over the" + " " + descript + " " + object;
   return fullSen;
 }
 
-var word1 = "dog";
-var word2 = "leaped";
-var word3 = "red";
-var word4 = "box";
 
-madlib();
+madlib("dog", "leaped", "red", "box");
