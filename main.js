@@ -60,11 +60,10 @@ function avg(x,y,z){
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // A:
 function getLength(hi){
-  var hi = "hi";
   return (hi.length);
 }
 
-getLength();
+getLength("hi");
 
 // 7.
 // Write a function called `greaterThan` that takes two parameters
